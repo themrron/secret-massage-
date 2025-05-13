@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message Encryptor/Decryptor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Secure Message Transfer</h1>
+
+        <div class="section">
+            <h2>Encrypt Message</h2>
+            <label for="encrypt-message">Message to Encrypt:</label>
+            <textarea id="encrypt-message" rows="4" placeholder="Enter your secret message here..."></textarea>
+
+            <label for="encrypt-password">Password (Secret Key):</label>
+            <input type="password" id="encrypt-password" placeholder="Enter a strong password">
+
+            <button id="encrypt-btn">Encrypt</button>
+
+            <label for="encrypted-output">Encrypted Message (Ciphertext):</label>
+            <textarea id="encrypted-output" rows="4" readonly placeholder="Encrypted message will appear here..."></textarea>
+            <button id="copy-encrypted-btn">Copy Ciphertext</button>
+        </div>
+
+        <hr>
+
+        <div class="section">
+            <h2>Decrypt Message</h2>
+            <label for="decrypt-message">Message to Decrypt (Ciphertext):</label>
+            <textarea id="decrypt-message" rows="4" placeholder="Paste the encrypted message here..."></textarea>
+
+            <label for="decrypt-password">Password (Secret Key):</label>
+            <input type="password" id="decrypt-password" placeholder="Enter the same password used for encryption">
+
+            <button id="decrypt-btn">Decrypt</button>
+
+            <label for="decrypted-output">Decrypted Message (Plaintext):</label>
+            <textarea id="decrypted-output" rows="4" readonly placeholder="Decrypted message will appear here..."></textarea>
+        </div>
+
+        <p class="status" id="status-message"></p>
+        <p class="warning">
+            <strong>Important:</strong> This tool uses client-side encryption.
+            Use strong, unique passwords. The security relies on the password you choose
+            and the integrity of this script. Do not use for highly sensitive data
+            without understanding the risks.
+        </p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
